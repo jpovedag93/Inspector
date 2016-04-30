@@ -1,34 +1,29 @@
 <?php
 
-include("./cuerpo.php");
+include_once("cuerpo.php");
+include_once("conexiondb.php");
+include_once("pruebaconsulta.php");
 
 head_html();
-?>
+etiquetalogin();
 
-<?php
+
 
 	echo "
-		<body>
-
-			<h1 class='text-center'>INSPECTOR</h1>
-		    <a href='Login.aspx'>Login</a>
-		    <ul id='menuinicio'>
-				        
-		        <li>Quienes Somos</li>
-		        <li><a href='contactenos.php'>Contactanos</a></li>
-		    </ul>
-		    <br />
-		    <br />
-		    <br />
-		    <br />
-
-		    <div class='text-center'>
-		        <form id='BuscarDoc' runat='server' >
-		            <p class='text-center'>Digita el numero de Documento</p>
+		<body class='bodyindex'>
+			<br /><br />
+			<h1 class='tdoc'>INSPECTOR</h1> <br/>";
+?>
+			<?php menu_html(); ?>
+	<?php 
+	echo"
+		<br /><br /><br />
+			<div class='text-center'>
+		        <form id='BuscarDoc' action='"; buscardoc(); echo "' method='POST'>
+		            <p class='tdoc'>Digita el numero de Documento</p>
+		            <input type='text' placeholder='No. Documento' name='docencper' class='form-username form-controlbusc' height='33' Width='25px' Font-Size='34px' align='center' />
 		            <br />
-		            <input type='text' placeholder='No. Documento' runat='server' class='panel panel-default' Height='43px' Width='259px' Font-Size='30px' align='center' /><br />
-		            <br />
-		                <input type='button' class='btn btn-primary' runat='server' value='Encontré este Documento' OnClick='btnDocEncontrado_Click' />
+		                <input type='submit' class='btn btn-primary' value='Encontré este Documento' OnClick='btnDocEncontrado_Click' />
 		            <input type='button' class='btn btn-warning' runat='server' value='Perdí este Documento' OnClick='btnDocEncontrado_Click' /><br />
 		            <br />
 		        </form>
@@ -36,18 +31,5 @@ head_html();
 
 		</body>
 ";
-
+footer_html();
 ?>
-
-
-	<header>	
-		<?php header_html(); ?>
-	</header>
-	<footer>
-	<?php footer_html(); ?>		
-	</footer>
-</body>
-
-	
-
-
