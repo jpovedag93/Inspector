@@ -2,7 +2,6 @@
 
 include_once("cuerpo.php");
 include_once("conexiondb.php");
-include_once("pruebaconsulta.php");
 
 head_html();
 etiquetalogin();
@@ -19,7 +18,7 @@ etiquetalogin();
 	echo"
 		<br /><br /><br />
 			<div class='text-center'>
-		        <form id='BuscarDoc' action='"; buscardoc(); echo "' method='POST'>
+		        <form id='BuscarDoc' action='pruebaconsulta' method='POST'>
 		            <p class='tdoc'>Digita el numero de Documento</p>
 		            <input type='text' placeholder='No. Documento' name='docencper' class='form-username form-controlbusc' height='33' Width='25px' Font-Size='34px' align='center' />
 		            <br />
@@ -31,5 +30,7 @@ etiquetalogin();
 
 		</body>
 ";
-footer_html();
+ footer_html();
 ?>
+
+		
