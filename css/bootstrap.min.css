@@ -7276,9 +7276,16 @@ textarea.form-control:focus {
 .top-content
 {   
     margin: 12% auto;
-    color: #eee;
-    
+    color: #eee;   
 }
+
+.top-contentrg
+{   
+    margin-left: -53%;
+    color: black;    
+}
+
+
 .container-footer
 {
     

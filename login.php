@@ -43,7 +43,7 @@ head_html();
 			                        	<label class="sr-only" for="form-password">Contraseña...</label>
 			                        	<input type="password" name="form-password" placeholder="Contraseña..." class="form-password form-control" id="form-password ">
 			                        </div>
-			                        <button type="submit" class="btn btn-warning">Sign in!</button>
+			                        <button type="submit" class="btn btn-info">Sign in!</button>
 			                        <a href="index"><button type="button" class="btn btn-danger">Cancelar</button></a>
 			                    </form>
 		                    </div>
