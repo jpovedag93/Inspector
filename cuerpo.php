@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 	function head_html()
 	{
@@ -149,5 +150,29 @@
 		";
 	}
 
+function sesioniniciada()
+{	 
+	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true)
+	{
+	 	
+	}
+	else
+	{
+	header("location:pgerror");
+	//echo "<script> alert(Esta pagina es solo para usuarios registrados.);</script><br>";
+	//echo "<a href='login'>Login Here!</a>";
+	 
+	exit;
+	}
+	$now = date("Y-m-j H:i:s"); // checking the time now when home page starts
+	 
+	if($now > $_SESSION['expire'])
+	{
+	session_destroy();
+	echo "Su sesion a terminado, <a href='login'>
+	      Necesita Hacer Login</a>";
+	exit;
+	}
+}
 
 ?>

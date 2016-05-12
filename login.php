@@ -34,14 +34,14 @@ head_html();
                         		</div>
                             </div>
                             <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="login-form">
+			                    <form role="form" action="insesion" method="post" class="login-form">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Usuario...</label>
-			                        	<input type="text" name="form-username" placeholder="Usuario..." class="form-username form-control" id="form-username">
+			                        	<input type="text" name="usuario" placeholder="Usuario..." class="form-username form-control" id="form-username" required>
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Contraseña...</label>
-			                        	<input type="password" name="form-password" placeholder="Contraseña..." class="form-password form-control" id="form-password ">
+			                        	<input type="password" name="contrasena" placeholder="Contraseña..." class="form-password form-control" id="form-password" required>
 			                        </div>
 			                        <button type="submit" class="btn btn-info">Sign in!</button>
 			                        <a href="index"><button type="button" class="btn btn-danger">Cancelar</button></a>
