@@ -11,6 +11,7 @@ session_start();
 				<meta charset='utf-8' />
 				<title>Inspector</title>
 				<meta name='description' content=''>
+				<link rel='icon' href='./img/lupa.png'>
 		
 				<link rel='stylesheet' href='css/bootstrap.min.css'>
 			    <link rel='stylesheet' href='css/bootstrap-theme.css'>

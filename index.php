@@ -11,7 +11,7 @@ etiquetalogin();
 	echo "
 		<body class='bodyindex'>
 			<br /><br />
-			<h1 class='tdoc'>INSPECTOR</h1> <br/>";
+			<h1 class='tdoc'>INSPECTOR  <img src='./img/lupa.png' alt='' whith='55px' height='55px' />	</h1>   <br/> 	";
 ?>
 			<?php menu_html(); ?>
 	<?php 
