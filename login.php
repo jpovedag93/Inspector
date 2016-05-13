@@ -4,6 +4,7 @@ include_once("cuerpo.php");
 include_once("conexiondb.php");
 
 head_html();
+etiquetalogin();
 
 ?>
 
@@ -44,7 +45,9 @@ head_html();
 			                        	<input type="password" name="contrasena" placeholder="Contraseña..." class="form-password form-control" id="form-password" required>
 			                        </div>
 			                        <button type="submit" class="btn btn-info">Sign in!</button>
+                                    <a href='#' data-toggle='modal' data-target='#miventana'><button class="btn btn-warning">Registrarse</button></a>
 			                        <a href="index"><button type="button" class="btn btn-danger">Cancelar</button></a>
+
 			                    </form>
 		                    </div>
                         </div>

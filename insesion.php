@@ -37,7 +37,7 @@ include_once("conexiondb.php");
 	$username = $_POST['usuario'];
 	$password = $_POST['contrasena'];
 	 
-	$sql= "SELECT * FROM $tbl_name WHERE usuario='$username' and contrasena='$password'";
+	$sql= "SELECT * FROM $tbl_name WHERE Nick_usuario='$username' and Contrasena_Usuario='$password'";
 	 
 	$result=mysql_query($sql);
 	 

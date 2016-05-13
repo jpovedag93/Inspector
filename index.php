@@ -26,8 +26,7 @@ etiquetalogin();
 		            <input type='button' class='btn btn-warning' runat='server' value='Perdí este Documento' OnClick='btnDocEncontrado_Click' /><br />
 		            <br />
 		        </form>
-		    </div>
-
+		    </div>			
 		</body>
 ";
  footer_html();

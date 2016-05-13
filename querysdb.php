@@ -5,7 +5,9 @@ include_once("cuerpo.php");
 head_html();
 ?>
 
-				
+	<body class="bodyindex">
+					
+					
 <br/ >
 <br/ >
 <br/ >
@@ -31,7 +33,7 @@ head_html();
 		
 $doc = trim($_POST['docencper']);
 
-	$sql = "SELECT rutaimg, nombre, email, telefono, mensaje FROM contacto WHERE telefono='".$doc."'";
+	$sql = "SELECT Numero_Documento, Tipo_Documento, Otro_Tipo_Documento, Nombre_en_Documento, Descripcion_Documento, Imagen, Lugar, Tiempo, Nick_Usuario_Busqueda, Estado_Documento FROM documento WHERE Numero_Documento='".$doc."'";
 			$result = mysql_query ($sql);
 // verificamos que no haya error
 		if (! $result){
@@ -43,17 +45,21 @@ $doc = trim($_POST['docencper']);
 while ($row = mysql_fetch_row($result)){
 echo "
 <div>
- <table border='5
-' width=200px>
- 	<tr width=200px>
+ <table border='0' width='1200px' align='center'>
+ 	<tr>
  		<td>
- 			<img src='".$row[0]."' id='imgconsulta' class='img-rounded'width='200px' height='200px' />
+ 			<img src='".$row[5]."' id='imgconsulta' class='img-rounded'width='200px' height='200px' />
  		</td>
- 		<td class='one' style='max-width:90px'>
-			<p for='numerodoc'>".$row[1]."</p><br />
- 			<p for='numerodoc'>".$row[2]."</p><br /> 			
- 			<p for='descripcion'>".$row[3]."</p><br />		
- 			<p for='descripcion'>".$row[4]."</p><br />	
+ 		<td class='one' style='max-width:900px'>
+			<h3>Numero de Docuemnto: </h3><p for='numerodoc'>".$row[0]."</p>
+ 			Tipo Documento: <p for='numerodoc'>".$row[1]."</p> 			
+ 			<p for='descripcion'>".$row[2]."</p>		
+ 			<p for='descripcion'>".$row[3]."</p>	
+ 			<p for='descripcion'>".$row[4]."</p>
+ 			<p for='descripcion'>".$row[6]."</p>
+ 			<p for='descripcion'>".$row[7]."</p>
+ 			<p for='descripcion'>".$row[8]."</p>
+ 			<p for='descripcion'>".$row[9]."</p>
 		</td> 	
 </div>
  </table>
@@ -64,3 +70,5 @@ echo "
 <footer>
 	<?php footer_html(); ?>
 </footer>
+
+</body>		
