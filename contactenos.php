@@ -7,17 +7,18 @@ head_html();
 ?>
 
 <?php
-
+echo "
+		<body class='bodyindex'>
+			<br /><br />
+			<h1 class='tdoc'>INSPECTOR</h1> <br/>";
+?>
+			<?php menu_html(); ?>
+	<?php 
 	echo "
 		<div class='text-center'>
 			<body>
-				<h1>Contactenos</h1>
-				<ul id='menuinicio'>
-			        <li><a href='index.php'>INICIO</a></li>
-			        <li><a>Quienes Somos</a></li>
-			        <li><a href='contactenos.php'>Contactanos</a></li>
-		   	    </ul>
-		       	<form action='conexiondb.php' method='GET'>
+				<h3>Escribe tu comentario</h3>
+				    	<form action='conexiondb.php' method='GET'>
 			        <label>Nombre<input type='text' ID='txtnomcontacto' runat='server' /><br />
 			        <label>Email<input type='text' ID='txtemailcontacto' /><br />
 			        <label>Telefono<input type='text' ID='txttelcontacto' /><br />
