@@ -39,8 +39,8 @@ session_start();
 		echo "
 			<div class='bs-example'>
 			    <ul class='nav nav-pills'>
-			        <li class='active'><a href='index'>Home</a></li>
-			        <li><a href='mostdocumento'>most doc</a></li>
+			        <li class='active'><a href='index'>Inicio</a></li>
+			        <li><a href='mostdocumento'>Mostrar Documento</a></li>
 			        <li>
 			            <a href='contactenos'>Contactenos</a>
 			        </li>

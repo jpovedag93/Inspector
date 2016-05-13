@@ -19,11 +19,13 @@ echo "
 			<body>
 				<h3>Escribe tu comentario</h3>
 				    	<form action='conexiondb.php' method='GET'>
-			        <label>Nombre<input type='text' ID='txtnomcontacto' runat='server' /><br />
-			        <label>Email<input type='text' ID='txtemailcontacto' /><br />
-			        <label>Telefono<input type='text' ID='txttelcontacto' /><br />
-			        <label>Mensaje<input type='textarea' id='txtmensaje' Columns='50' Rows='5' /><br />		      
-			        <input type='submit' class='btn btn-danger' value='Enviar' OnClick='btncontacto_Click' />
+				     <p><input type='text' placeholder='Tu Nombre' name='txtnombrecontactar' class='form-username form-controlbusc' height='25' Width='20px' Font-Size='40px' align='center' /></p>
+				     <p><input type='text' placeholder='Tu Correo Electronico' name='txtcorreocontactar' class='form-username form-controlbusc' height='25' Width='20px' Font-Size='40px' align='center' /></p>
+				     <p><input type='text' placeholder='Tu Telefono' name='txttelefonocontactar' class='form-username form-controlbusc' height='25' Width='20px' Font-Size='40px' align='center' /></p>
+					 <p><p><textarea class='form-control' rows='5' cols='10' whith='10px' id='comment'></textarea></p></p>	   
+			         <br><input type='submit' class='btn btn-danger' value='Enviar' OnClick='btncontacto_Click' /></>
+
+
 		   		</form>
 	    	</body>
 	    </div>
