@@ -37,7 +37,7 @@ session_start();
 	function menu_html()
 	{
 		echo "
-			<div class='bs-example' style='position:relative;left:-25px;'>
+			<div class='bs-example' style='position:relative;left:-28px;'>
 			    <ul class='nav nav-pills'>
 			        <li class='active'><a href='index'>Inicio</a></li>
 			        <li class='active'><a href='mostdocumento'>Mostrar Documento</a></li>
