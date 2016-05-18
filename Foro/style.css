@@ -1,0 +1,361 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+form
+{
+    width: 45%;
+    margin: 20px auto;
+    padding:4px 10px 5px 10px;
+}
+form ul .errorMessage
+{
+    color:#e32;
+    text-align: center;
+    font-size: 16px;
+    font-family: Verdana;
+    padding: 1%;
+}
+form ul li
+{
+    list-style: none;
+    display: block;
+    padding: 6px 8px 7px;
+    border-bottom: 1px solid #444;
+    overflow: hidden;
+}
+form ul li:last-child
+{
+    border:0;
+}
+form ul li label
+{
+    float: left;
+    font-size: 16px;
+    font-family: Verdana;
+    color: #464646;
+}
+form ul li .required:after
+{
+    content: '*';
+    color:#e32;
+    font-family: 14px;
+
+}
+form ul li input, form ul li textarea
+{
+    float:right;
+    width: 250px;
+    padding: 5px 8px 5px 8px;
+    outline: none;
+    border-radius: 3px;
+    border:1px solid #676767;
+    font-family: Verdana;
+    font-size: 14px;
+}
+form ul li input:focus, form ul li textarea:focus
+{
+    border:1px solid #40BC97;
+    outline:1px solid #40BC97;
+}
+form ul li textarea
+{
+    width: 280px;
+    max-width: 280px;
+    height: 140px;
+    max-height: 140px;
+    resize:none;
+}
+form ul li button
+{
+    float: right;
+    padding:6px 12px;
+    font-size: 14px;
+    font-family: Verdana;
+    color:#eee;
+    background-color: #f0ad4e;
+    border: 1px solid #eea236;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+form ul li button:hover
+{
+    background-color: #eea236;
+}
+
+.success
+{
+    margin: 10px auto;
+    width: 30%;
+    font-family: Verdana;
+    font-size: 16px;
+    color: #eee;
+    font-weight: bold;
+    background-color: #5CAE41;
+    padding: 1%;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    
+}
+.close
+{
+    position: absolute;
+    top:15px;
+    right: 15px;
+    cursor: pointer;
+    color:#e2e2e2;
+    font-weight: none;
+    font-family: Arial;
+}
+.close:hover
+{
+    color:#454545;
+}
+h2
+{
+    font-size: 24px;
+    font-family: Verdana;
+    color: #444;
+    text-align: center;
+    margin-top: 15px;
+}
+h2 a
+{
+    text-decoration: none;
+    color:#eee;
+    font-size: 14px;
+    background-color: #f0ad4e;
+    border: 1px solid #eea236;
+    padding:5px 8px;
+    margin-left: 20px;
+
+}
+h2 a:hover
+{
+    background-color: #eea236;
+}
+.container
+{
+    width: 98%;
+    margin:30px auto;
+    overflow: hidden;
+    padding:12px 15px 18px 15px;
+    background-color: #dadada;
+    border-radius: 12px;
+}
+
+.container .sidebarleft-themes
+{
+    float: left;
+    width: 25%;
+    max-height: 520px;
+    overflow-y: auto;
+    padding-right: 8px
+}
+.container .sidebarleft-themes::-webkit-scrollbar , .container .sidebarright-content::-webkit-scrollbar 
+{
+    width: 8px;
+
+} 
+.container .sidebarleft-themes::-webkit-scrollbar-track ,.container .sidebarright-content::-webkit-scrollbar-track 
+{
+    background-color: transparent;
+} 
+.container .sidebarleft-themes::-webkit-scrollbar-thumb , .container .sidebarright-content::-webkit-scrollbar-thumb 
+{
+    background: rgba(0,0,0,0.65);
+    border-radius: 12px;
+}
+.container .sidebarright-content
+{
+    float: right;
+    width: 74%;
+    text-align: center;
+    max-height: 520px;
+    overflow-y: auto;
+    position: relative;
+    
+}
+.container .sidebarright-content img
+{
+    width: 16%;
+}
+.empty
+{
+    padding: 4px 6px 5px 8px;
+    margin: 8px auto;
+    width: 45%;
+    background-color: #E98F4F;
+    border: 1px solid #C9793F;
+    font-family: Verdana;
+    font-size: 15px;
+    color:#eee;
+    text-align: center;
+}
+.space
+{
+    padding:4px;
+}
+
+.theme
+{
+    width: 100%;
+    background-color: #fff;
+    padding:1%;
+    display: block;
+    border-radius: 4px;
+}
+.theme .theme-header
+{
+    padding: 4px 9px 12px 6px;
+    border-bottom: 1px solid #777;
+    overflow:hidden;
+}
+.theme .theme-header img
+{
+    width: 45px;
+    float: left;
+    border-radius: 50%;
+    border:1px solid #9a9a9a;
+    
+}
+
+.theme .theme-header .theme-header-content
+{
+    float: right;
+    width: 80%;
+}
+.theme .theme-header .theme-header-content li 
+{
+    list-style: none;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Verdana;
+    padding: 2px 4px 5px 2px;
+}
+.theme .theme-header .theme-header-content li:last-child
+{
+    font-weight: normal;
+    font-size: 12px;
+    text-align: right;
+    font-family: Arial;
+    border-top: 1px solid #dedede;
+}
+.theme .theme-content
+{
+    padding: 3px 4px 6px 4px;
+    overflow:hidden;
+}
+.theme .theme-content li
+{
+    list-style: none;
+    display: block;
+    padding: 2px 5px 4px 2px;
+    font-family: Verdana;
+    word-wrap: break-word;
+    padding: 12px 0 12px 0;
+    border-bottom: 1px solid #646464;
+}
+.theme .theme-content li:first-child
+{
+    font-weight: bold;    
+    font-size: 15px;
+    padding: 0 !important;
+    border-bottom: none !important;
+}
+
+.theme .theme-content .theme-button
+{
+    float: right;
+    padding:3px 6px 4px 6px;
+    background-color: #f0ad4e;
+    border: 1px solid #eea236;
+    color:#eee;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    
+}
+.theme .theme-content .theme-button:hover
+{
+    background-color: #eea236;
+}
+.theme-details-content
+{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 38px;
+    border-top: 1px solid #9c9c9c;
+    overflow:auto;
+}
+.theme-details-answer form
+{
+    width: 70%;    
+}
+.theme-details-content .answer
+{
+    width: 69%; 
+    background-color: #fff;
+    padding: 4px 10px 8px 12px;
+    border-radius: 8px;
+    margin: 0 auto;
+
+}
+.theme-details-content .answer .answer-header
+{
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 12px;
+    border-bottom:  1px solid #444;
+
+}
+.theme-details-content .answer .answer-header img 
+{
+    width:65px;
+    float: left;
+    border-radius: 50%;
+    border: 1px solid #adadad;
+}
+.theme-details-content .answer .answer-header .answer-header-content
+{
+    float: right;
+    width: 85%;
+    text-align: left;
+    padding:4px 5px 6px 4px;
+}
+.theme-details-content .answer .answer-header .answer-header-content li
+{
+    list-style: none;
+    padding: 6px 8px 5px 3px;
+    color:#444;
+}
+.theme-details-content .answer .answer-header .answer-header-content li:first-child
+{
+    font-family: Verdana;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #aaa;
+}
+.theme-details-content .answer .answer-header .answer-header-content li:last-child
+{
+    font-family: Arial;
+    font-size: 12px;
+    text-align:right; 
+}
+.theme-details-content .answer .answer-content
+{
+    padding: 8px 6px 9px 6px; 
+    text-align: left;
+    font-size: 15px;
+    font-family: Verdana;
+    color:#444;
+    word-wrap: break-word;
+}

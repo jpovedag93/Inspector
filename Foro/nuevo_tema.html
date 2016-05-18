@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo tema</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <form action="create_theme.php" method="POST" id="form-nuevo">
+        <ul>
+            <div class="errorMessage"></div>
+
+            <li>
+                <label class="required">Tema:</label>
+                <input type="text" name="tema" id="tema">
+            </li>
+            <li>
+                <label class="required">Autor:</label>
+                <input type="text" name="autor" id="autor">
+            </li>            
+            <li>
+                <label class="required">Descripción:</label>
+                <textarea name="descripcion" id="descripcion"></textarea>
+            </li>
+            <li>
+                <button>Crear tema.</button>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>
