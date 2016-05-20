@@ -7,16 +7,16 @@ include_once("conexiondb.php");
 
 sesioniniciada();
 head_html();
-etiquetalogin();
+etiquetalogin2();
 
 
 
 	echo "
 		<body class='bodyindex'>
 			<br /><br />
-			<h1 class='tdoc'>INSPECTOR</h1>  <br/>";
+			<h1 class='tdoc'>INSPECTOR  <img src='./img/lupa.png' alt='' whith='55px' height='55px' />	</h1>   <br/> 	";
 ?>
-			<?php menu_html(); ?>
+			<?php menur_html(); ?>
 	<?php 
 	echo"
 		<br /><br /><br />
@@ -30,9 +30,7 @@ etiquetalogin();
 		            <br />
 		        </form>
 		    </div>
-		    <input type='button' class='btn btn-warning' value='cerrar sesion' /><br />
-		    <a href='finsesion'>cerrar sesion</a>
-		            <br />
+		    
 
 		</body>
 ";

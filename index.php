@@ -23,7 +23,7 @@ etiquetalogin();
 		            <input type='text' placeholder='No. Documento' name='docencper' class='form-username form-controlbusc' height='33' Width='25px' Font-Size='34px' align='center' />
 		            <br />
 		                <input type='submit' class='btn btn-primary' value='Encontré este Documento' OnClick='btnDocEncontrado_Click' />
-		            <input type='button' class='btn btn-warning' runat='server' value='Perdí este Documento' OnClick='btnDocEncontrado_Click' /><br />
+		            <input type='button' class='btn btn-warning' value='Perdí este Documento' OnClick='btnDocEncontrado_Click' /><br />
 		            <br />
 		        </form>
 		    </div>			
