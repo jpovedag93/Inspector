@@ -18,12 +18,12 @@ echo "
 		<div class='text-center'>
 			<body>
 				<h3>Escribe tu comentario</h3>
-				    	<form action='conexiondb.php' method='GET'>
+				    	<form action='envcorreocontacto' method='post'>
 				     <p><input type='text' placeholder='Tu Nombre' name='txtnombrecontactar' class='form-username form-controlbusc' height='25' Width='20px' Font-Size='40px' align='center' /></p>
 				     <p><input type='text' placeholder='Tu Correo Electronico' name='txtcorreocontactar' class='form-username form-controlbusc' height='25' Width='20px' Font-Size='40px' align='center' /></p>
 				     <p><input type='text' placeholder='Tu Telefono' name='txttelefonocontactar' class='form-username form-controlbusc' height='25' Width='20px' Font-Size='40px' align='center' /></p>
-					 <p><p><textarea input type='text' placeholder='Tu Mensaje'  class='form-username form-controlbusc' style='height:70%;'></textarea></p></p>	   
-			         <br><input type='submit' class='btn btn-danger' value='Enviar' OnClick='btncontacto_Click' /></>
+					 <p><p><textarea input type='text' placeholder='Tu Mensaje' name='txtmensajecontactar' class='form-username form-controlbusc' style='height:70%;'></textarea></p></p>	   
+			         <br><input type='submit' class='btn btn-danger' value='Enviar' /></>
 
 
 		   		</form>

@@ -16,28 +16,28 @@ head_html();
 		
 $doc = trim($_POST['docencper']);
 
-	$sql = "SELECT Numero_Documento, Tipo_Documento, Otro_Tipo_Documento, Nombre_en_Documento, Descripcion_Documento, Imagen, Lugar, Tiempo, Nick_Usuario_Busqueda, Estado_Documento FROM documento WHERE Numero_Documento='".$doc."'";
+	$sql = "SELECT Numero_Documento, Tipo_Documento, Nombre_en_Documento, Descripcion_Documento, Imagen, Lugar, Tiempo, Nick_Usuario_Busqueda, estado FROM documento WHERE Numero_Documento='".$doc."'";
 			$result = mysql_query ($sql);
 // verificamos que no haya error
 		if (! $result){
    echo "La consulta SQL contiene errores.".mysql_error();
-   echo "<script>alert('no se econtro docuemntos');</script>";
+   echo "<script>alert('no se econtro docuemntossssss');</script>";
    	exit();
 }	else {
 
 while ($row = mysql_fetch_row($result)){
 echo "
 <div style='color: #fff;'>
- <table border='0' align='center' style='max-width: 50%; text-align:center;' >
+ <table border='0' align='center' style='max-width: 50%;' >
 	 	<tr>
-	 		<td colspan='2'>
-	 			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<img src='".$row[5]."' id='imgconsulta' class='img-rounded'width='250px' height='150px' />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br /> <br />
+	 		<td colspan='2' style='text-align:center;'>
+	 			&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<img src='".$row[4]."' id='imgconsulta' class='img-rounded'width='250px' height='150px' />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br /> <br />
 	 		</td>
 	 	</tr>
 	 	</tr>
 	 		
  		<td  colspan='2' style='max-width: 50%;'>			
- 			<b>Descripción: </b><p for='ciudad'>".$row[4]."</p>
+ 			<b>Descripción: </b><p for='ciudad'>".$row[3]."</p>
 		</td>
 	</tr>
  		<tr>
@@ -50,23 +50,23 @@ echo "
 	 	</tr>
 	 	<tr>
 	 		<td>
-	 			<b>Nombre: </b><p for='descripcion'>".$row[3]."</p>	
+	 			<b>Nombre: </b><p for='descripcion'>".$row[2]."</p>	
 	 		</td>
 	 		<td>
-	 			<b>Fecha de registro: </b><p for='descripcion'>".$row[7]."</p>	
-	 		</td>
-	 	</tr>
-	 	<tr>
-	 		<td>
-	 			<b>Estado Documento: </b><p for='descripcion'>".$row[9]."</p>
-	 		</td>
-	 		<td>
-	 			<b>Ciudad: </b><p for='descripcion'>".$row[6]."</p>
+	 			<b>Fecha de registro: </b><p for='descripcion'>".$row[6]."</p>	
 	 		</td>
 	 	</tr>
 	 	<tr>
 	 		<td>
-	 			<b>Usuario que registró documento: </b><p for='descripcion'>".$row[8]."</p>
+	 			<b>Estado Documento: </b><p for='descripcion'>".$row[8]."</p>
+	 		</td>
+	 		<td>
+	 			<b>Encontrado en: </b><p for='descripcion'>".$row[5]."</p>
+	 		</td>
+	 	</tr>
+	 	<tr>
+	 		<td>
+	 			<b>Usuario que registró documento: </b><p for='descripcion'>".$row[7]."</p>
 	 		</td>	 		
 	 	  	
 </div>
