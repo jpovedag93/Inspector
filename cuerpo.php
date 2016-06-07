@@ -42,8 +42,7 @@ session_start();
 			    <ul class='nav nav-pills'>
 			        <li class='active'><a href='index'>Inicio</a></li>
 			        <li class='active'><a href='mostdocumento'>Mostrar Documento</a></li>
-			        <li class='active'><a href='contactenos'>Contactenos</a>
-			        </li>
+			        <li class='active'><a href='contactenos'>Contactenos</a>  </li>
 			    </ul>
 			</div>
 		";

@@ -1,7 +1,6 @@
 <?php 
 
-$link = mysql_connect('localhost','root','') or die ("Error al conectar al servidor");
-$db = mysql_select_db("foro", $link) or die ("Error al seleccionar la base de datos.");
+require_once "../conexiondb.php";
 
 $autor = $_POST['autor'];
 $desc = $_POST['desc'];
@@ -13,8 +12,8 @@ $query = "INSERT INTO respuestas VALUES(null, " . $id_tema . ", '" . $autor . "'
 
 $result = mysql_query($query);
 
-if(!$result)
-{
+if(!$result) 
+{ 
     echo "0";
 }
 else

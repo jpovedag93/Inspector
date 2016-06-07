@@ -1,12 +1,11 @@
 <?php 
 
-$link = mysql_connect('localhost','root','') or die ("Error al conectar al servidor");
-$db = mysql_select_db("foro", $link) or die ("Error al seleccionar la base de datos.");
+require_once "../conexiondb.php";
 
 
-$query = "SELECT * FROM temas";
+$query = "SELECT * FROM temas order by fecha_hora desc";
 $resul = mysql_query($query);
-
+$cant = mysql_num_rows($resul);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +14,7 @@ $resul = mysql_query($query);
     <title>Foro</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <script src="jquery.js"></script>
     <script src="script.js"></script>
@@ -24,14 +24,14 @@ $resul = mysql_query($query);
         <div class="success"><div class="close">X</div>Se ha guardado el nuevo tema...</div>
     <?php endif;?>
 
-    <h2>Foro - Temas <a href="nuevo_tema.html">Agregar nuevo tema.</a></h2>
+    <h2>Foro - Temas <a href="nuevo_tema.html" class="btn-success newTheme">Agregar nuevo tema.</a></h2>
 
 
     <div class="container">
         <div class="sidebarleft-themes">
 
-            <?php if(!$resul):?>
-                <div class="empty">No hay temas para mostrar.</div>                            
+            <?php if($cant == 0):?>
+                <div class="empty btn-danger">No hay temas para mostrar.</div>                            
             <?php else:?>                
                 <?php while(($row = mysql_fetch_array($resul))):?>
 
@@ -44,13 +44,13 @@ $resul = mysql_query($query);
                             </div>                            
                         </div>
                         <div class="theme-content">
-                            <li>Autor: <?=$row['autor_tema']?></li>
+                            <li>Autor: <?=$row['usuario']?></li>
                             <li><?=substr($row['descripcion'],0,150)?><?=(strlen($row['descripcion']) >= 150) ? '...' : ''?> </li>
                             <br>                            
-                            <button id="<?=$row['id']?>" name-theme="<?=$row['nombre_tema']?>" class="theme-button">Participar</button>
+                            <button id="<?=$row['id']?>" name-theme="<?=$row['nombre_tema']?>" class="theme-button btn-success">Participar</button>
                         </div>
                     </div>
-                    <div class="space"></div>
+                    <div class="spaceDIV"></div>
 
                 <?php endwhile;?> 
             <?php endif;?>
@@ -58,7 +58,7 @@ $resul = mysql_query($query);
         </div>
 
         <div class="sidebarright-content">
-            <div class="empty">Seleccione un tema...</div> 
+            <div class="empty btn-danger">Seleccione un tema...</div> 
             <h2 class="theme-title"></h2>           
 
             <div class="theme-details-answer" style="display:none;">
@@ -74,7 +74,7 @@ $resul = mysql_query($query);
                             <label class="required">Descripción:</label>
                             <textarea name="answer-descripcion" id="answer-descripcion"></textarea>
                         </li>
-                        <li><button class="save-answer">Enviar</button></li>
+                        <li><button class="save-answer btn-success">Enviar</button></li>
                     </ul>
                 </form>
             </div>
@@ -84,6 +84,36 @@ $resul = mysql_query($query);
         </div>
 
     </div>
+
+
+    <div class="modalmask"style="display:none">
+        <div class="form-modal">
+            <span class="closemodal" title="Cerrar">X</span>
+            <h2>Nuevo tema</h2>
+            <form action="create_theme.php" method="POST" id="form-nuevo">
+            <ul>
+                <div class="errorMessage"></div>
+
+                <li>
+                    <label class="required">Tema:</label>
+                    <input type="text" name="tema" id="tema">
+                </li>
+                <li>
+                    <label class="required">Autor:</label>
+                    <input type="text" name="autor" id="autor">
+                </li>            
+                <li>
+                    <label class="required">Descripción:</label>
+                    <textarea name="descripcion" id="descripcion"></textarea>
+                </li>
+                <li>
+                    <button class="btn-success">Crear tema.</button>
+                </li>
+            </ul>
+        </form>
+        </div>
+    </div>
+
 
 </body>
 </html>

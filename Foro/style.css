@@ -6,7 +6,7 @@
 }
 form
 {
-    width: 45%;
+    width: 85%;
     margin: 20px auto;
     padding:4px 10px 5px 10px;
 }
@@ -17,6 +17,10 @@ form ul .errorMessage
     font-size: 16px;
     font-family: Verdana;
     padding: 1%;
+}
+form ul .errorMessage img
+{
+    width: 15%;
 }
 form ul li
 {
@@ -129,8 +133,7 @@ h2 a
     text-decoration: none;
     color:#eee;
     font-size: 14px;
-    background-color: #f0ad4e;
-    border: 1px solid #eea236;
+    font-family: Verdana;
     padding:5px 8px;
     margin-left: 20px;
 
@@ -145,14 +148,12 @@ h2 a:hover
     margin:30px auto;
     overflow: hidden;
     padding:12px 15px 18px 15px;
-    background-color: #dadada;
-    border-radius: 12px;
 }
 
 .container .sidebarleft-themes
 {
     float: left;
-    width: 25%;
+    width: 30%;
     max-height: 520px;
     overflow-y: auto;
     padding-right: 8px
@@ -174,7 +175,7 @@ h2 a:hover
 .container .sidebarright-content
 {
     float: right;
-    width: 74%;
+    width: 64%;
     text-align: center;
     max-height: 520px;
     overflow-y: auto;
@@ -190,25 +191,23 @@ h2 a:hover
     padding: 4px 6px 5px 8px;
     margin: 8px auto;
     width: 45%;
-    background-color: #E98F4F;
-    border: 1px solid #C9793F;
     font-family: Verdana;
     font-size: 15px;
     color:#eee;
     text-align: center;
 }
-.space
+.spaceDIV
 {
-    padding:4px;
+    padding:1%;
 }
 
 .theme
 {
     width: 100%;
-    background-color: #fff;
-    padding:1%;
+    background-color: #d9d9d9;
     display: block;
     border-radius: 4px;
+    padding: 3px 5px 4px;
 }
 .theme .theme-header
 {
@@ -274,18 +273,13 @@ h2 a:hover
 {
     float: right;
     padding:3px 6px 4px 6px;
-    background-color: #f0ad4e;
-    border: 1px solid #eea236;
     color:#eee;
     font-family: Verdana;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 14px;
     cursor: pointer;
+    border:none;
     
-}
-.theme .theme-content .theme-button:hover
-{
-    background-color: #eea236;
 }
 .theme-details-content
 {
@@ -302,7 +296,7 @@ h2 a:hover
 .theme-details-content .answer
 {
     width: 69%; 
-    background-color: #fff;
+    background-color: #d8d8d8;
     padding: 4px 10px 8px 12px;
     border-radius: 8px;
     margin: 0 auto;
@@ -326,7 +320,7 @@ h2 a:hover
 .theme-details-content .answer .answer-header .answer-header-content
 {
     float: right;
-    width: 85%;
+    width: 75%;
     text-align: left;
     padding:4px 5px 6px 4px;
 }
@@ -358,4 +352,41 @@ h2 a:hover
     font-family: Verdana;
     color:#444;
     word-wrap: break-word;
+}
+
+.modalmask
+{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999999999999999999;
+    background-color: rgba(0,0,0,.45);
+
+}
+.modalmask  .closemodal
+{
+    position: absolute;
+    top:15px;
+    right: 15px;
+    font-size: 16px;
+    color:#444;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Verdana;
+
+}
+.modalmask  .closemodal:hover
+{
+    color:#646464;
+}
+.modalmask .form-modal
+{
+    position: relative;
+    width: 60%;
+    margin: 40px auto;
+    background-color: #fff;
+    padding:1%;
+    border-radius: 8px;
 }

@@ -1,6 +1,18 @@
 $(document).ready(function(){
 
+    $(".newTheme").click(function(){
+        event.preventDefault();
+
+        $(".modalmask").fadeIn(350);
+    });
+
+    $(".closemodal").click(function(){
+        $(".modalmask").fadeOut(350);
+    });
+
     $("#form-nuevo").submit(function(){
+
+        event.preventDefault();
         
         $(".errorMessage").html("");
 
@@ -8,23 +20,44 @@ $(document).ready(function(){
         {
             $("#tema").focus();
             $(".errorMessage").html("El tema es obligatorio.");
-            return false;
+            
         }
         else if($("#autor").val() == "" || $.trim($("#autor").val()) == "")
         {
             $("#autor").focus();
             $(".errorMessage").html("El autor es obligatorio.");
-            return false;
+            
         }
         else if($("#descripcion").val() == "" || $.trim($("#descripcion").val()) == "")
         {
             $("#descripcion").focus();
             $(".errorMessage").html("La descripcion es obligatoria.");
-            return false;
+            
         }
         else
         {
-            return true;
+            var datos = "tema="+$("#tema").val()+"&autor="+$("#autor").val()+"&descripcion="+$("#descripcion").val() ;
+            $(".errorMessage").html("<img src='load.gif'>");
+
+
+            $.post("create_theme.php",datos, function(data){
+                console.log(data);
+                if(data == 0)
+                {
+                    $(".errorMessage").html("Error al ingresar el tema.");
+                }
+                else
+                {
+                    $(".errorMessage").html("");
+                    $(".sidebarleft-themes .empty").hide(0);
+                    $(".sidebarleft-themes").prepend(data);
+                    $(".modalmask").fadeOut(350);
+                    $(".errorMessage").html("");
+                    $("#tema").val("");
+                    $("#autor").val("");
+                    $("#descripcion").val("");
+                }
+            });
         }
 
     });
@@ -39,11 +72,12 @@ $(document).ready(function(){
         window.history.replaceState(null, null, path[0]);
     });
 
-    $(".theme-button").click(function(){
+    $(".theme-button").live('click',function(){
         var id = $(this).attr('id');
         var title_theme = $(this).attr("name-theme");
 
         $("#id_tema").val(id);
+        $(".errorMessage").html("");
 
 
         $(".theme-title").html("");
@@ -60,7 +94,7 @@ $(document).ready(function(){
 
                 $(".theme-details-answer").fadeIn(360);
 
-                if(data == '0')
+                if(data == 0)
                 {
                     $(".theme-details-content").html("<div class='empty'>No hay partificaciones...</div>");
                 }
@@ -110,6 +144,8 @@ $(document).ready(function(){
 
                         $(".theme-details-content").prepend(response);
                         $(".theme-details-content div:first").fadeIn(350);
+
+
                     }
                     else
                     {

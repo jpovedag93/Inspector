@@ -1,7 +1,6 @@
 <?php
 
-$link = mysql_connect('localhost','root','') or die ("Error al conectar al servidor");
-$db = mysql_select_db("foro", $link) or die ("Error al seleccionar la base de datos.");
+require_once "../conexiondb.php";
 
 $id_foro = $_POST['id_foro'];
 
