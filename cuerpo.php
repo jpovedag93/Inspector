@@ -151,7 +151,6 @@ session_start();
 			            <p text-center>ADSI 748811-G2<br />© Copyright 2016 INSPECTOR todos los derechos resevados.</p>
 			        </div>
         		</div>
-
 			";
 		}
 
@@ -206,6 +205,12 @@ session_start();
 			                        	<label class='sr-only' for='form-password'>Email</label>
 			                        	<input type='email' name='regemail' placeholder='Email...' class='form-password form-control' id='form-password '>
 			                        </div>
+
+			                        <div class='form-group'>
+			                        	<label class='sr-only' for='form-password'>Email</label>
+			                        	<input type='text' name='regciudad' placeholder='Ciudad...' class='form-password form-control' id='form-password '>
+			                        </div>
+			                        
 			                        <div class='form-group'>
 			                        	<label class='sr-only' for='form-password'>Nick</label>
 			                        	<input type='text' name='regnick' placeholder='Nick...' class='form-password form-control' id='form-password '>
