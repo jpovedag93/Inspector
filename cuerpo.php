@@ -155,6 +155,16 @@ session_start();
 
 	function etiquetalogin()
 	{
+
+		
+
+
+include('conexiondb.php');
+
+$result=mysql_query('select * from ciudades');
+
+
+
 		echo "
 
 		<div class='modal fade' id='miventana' tabindex='-1' role='dialog' aria-labelledby='myModallabel' aria-hidden='true'>
@@ -187,7 +197,7 @@ session_start();
                         		</div>
                             </div>
                             <div class='form-bottom'>
-			                    <form role='form' action='' method='post' class='login-form'>
+			                    <form role='form' action='registro.php' method='post' class='login-form'>
 			                    	<div class='form-group'>
 			                    		<label class='sr-only' for='form-username'>Nombres</label>
 			                        	<input type='text' name='regnombre' placeholder='Nombres...' class='form-username form-control' id='form-username'>
@@ -207,9 +217,17 @@ session_start();
 
 			                        <div class='form-group'>
 			                        	<label class='sr-only' for='form-password'>Email</label>
-			                        	<input type='text' name='regciudad' placeholder='Ciudad...' class='form-password form-control' id='form-password '>
+			                        	<select name='regciudad' id='' placeholder='Email...' class='form-password form-control' id='form-password '>";
+
+
+										while($row = mysql_fetch_array($result)) {
+										print("<option value=\"".$row["id"]."\">".$row["nombre_ciudad"]."</option>");
+										}
+										mysql_free_result($result);
+											echo"
+										</select>
 			                        </div>
-			                        
+
 			                        <div class='form-group'>
 			                        	<label class='sr-only' for='form-password'>Nick</label>
 			                        	<input type='text' name='regnick' placeholder='Nick...' class='form-password form-control' id='form-password '>
