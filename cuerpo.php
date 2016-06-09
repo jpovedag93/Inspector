@@ -9,7 +9,7 @@ session_start();
 		<!DOCTYPE html>
 			<html lang='es'>
 			<head>
-				<meta charset='utf-8' />
+				<meta charset='UTF-8'>
 				<title>Inspector</title>
 				<meta name='description' content=''>
 				<link rel='icon' href='./img/lupa.png'>
